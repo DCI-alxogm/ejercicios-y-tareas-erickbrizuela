@@ -43,4 +43,4 @@ Puedes elegir el que sea, quizá puedes probar varios al inicio hasta que decida
 1.- (¡Se realiza una sola vez!) Accede al siguiente link:[https://classroom.github.com/a/qY6aYBfr](https://classroom.github.com/a/gRRDa_R_) para crear tu repositorio principal para el curso. Si es la primera vez que usas github primero deberas crear tu cuenta de usuario.
 Durante las primeras clases veremos detalladamento como interactuar y usar el repositorio. Pero a partir del 3 de Febrero, ya no responderé preguntas básicas sobre el uso de github. 
 
-# TAREA: A mas tardar el día 26 de Enero debes tener resuelto con cual de las opciones estarás trabajando.
+# TAREA: A mas tardar el día 29 de Enero debes tener resuelto con cual de las opciones estarás trabajando.
