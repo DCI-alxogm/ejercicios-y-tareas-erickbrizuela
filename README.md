@@ -1,5 +1,6 @@
 # Programación Básica 2025 DCI-UGTO
 
+
 ### Prof. Alma González
 
 ### email: alma.gonzalez@fisica.ugto.mx / gonzalez.alma@ugto.mx
