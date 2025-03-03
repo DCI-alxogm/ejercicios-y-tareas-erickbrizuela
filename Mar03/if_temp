@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+int main(){
+printf("convierto cordenadas y temperaturas:cual hago?\n");
+scanf(respuesta1);
+otravez;
+	if cordenadas
+		printf(dame las cordenadas a convertir);
+		scanf(cordenadas);
+		print(las cordenadas son:,las convierto a esfericas o cilindricas);
+		scanf(respuesta2);
+		if cilindricas
+			printf(ya convertidas son);
+		else esfericas
+			printf(ya convertidas son);
+	else temperatura
+		printf(dame la temp a convertir);
+		scanf(temperatura);
+        print(quieres hacer algo mas);
+        scanf(respuesta3);
+        if si
+        	goto otravez
+	else 
+		print(hasta la proxima:);
+
+exit (0);
+}
