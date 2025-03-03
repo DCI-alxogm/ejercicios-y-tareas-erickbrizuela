@@ -1,29 +1,75 @@
+/*
+erick brizuela lazcano
+03 marzo 2025 ejercicio en clase
+programa calculadora de temperatura y/o cordenadas 
+comandos:printf,scanf,if,else,goto
+variables:int,float
+*/
 #include <stdio.h>
 #include<stdlib.h>
 #include<math.h>
-
 int main(){
-printf("convierto cordenadas y temperaturas:cual hago?\n");
-scanf(respuesta1);
-otravez;
-	if cordenadas
-		printf(dame las cordenadas a convertir);
-		scanf(cordenadas);
-		print(las cordenadas son:,las convierto a esfericas o cilindricas);
-		scanf(respuesta2);
-		if cilindricas
-			printf(ya convertidas son);
-		else esfericas
-			printf(ya convertidas son);
-	else temperatura
-		printf(dame la temp a convertir);
-		scanf(temperatura);
-        print(quieres hacer algo mas);
-        scanf(respuesta3);
-        if si
-        	goto otravez
-	else 
-		print(hasta la proxima:);
-
+    int respuesta,tipocordenada,seguir;
+    float x,y,z,re,rc,o,q;
+    int TK,TC;
+//definimos el ciclo si quisiera repetirse 
+inicio:    
+printf("(para responder en este programa :1=si,0=no)\n");
+printf("convierto cordenadas y temperaturas,quisieras convertir alguna de estas?\n");
+scanf("%d",&respuesta);
+//condicional,si es a cordenadas
+	if (respuesta==1){
+		printf("cordenadas?\n");
+		scanf("%d",&respuesta);
+		//ya en cordenadas ,condicional si es a esfericas o cilindricas
+		if(respuesta==1){
+		    printf("puedo convertir cordenadas rectangulares a esfericas o cilindricas\n");
+		    printf("quisieras transformar a cordenadas esfericas?\n");
+		    scanf("%d",&tipocordenada);
+		    if(tipocordenada==1){
+		        //esfericas
+		        printf("ok,convirtamos a cordenadas esfericas\n");
+		        printf("porfavor introduce cordenadas reectangulares validas para converir:\n");
+                scanf("%f",&x);
+                scanf("%f",&y);
+                scanf("%f",&z);
+		        re=sqrt(pow(x,2)+pow(y,2)+pow(z,2));
+                o=atan(y/x);
+                o=o*(180.0/M_PI);
+                q=acos(z/sqrt(pow(x,2)+pow(y,2)+pow(z,2)));
+                q=q*(180.0/M_PI);
+		        printf("las cordenadas rectangulares introducidas (x,y,z) y convertidas en esfericas (re,o,q) son: (%f,%f,%f)\n",re,o,q);
+		    }else{
+		        //cilindricas
+		        printf("ok entonces a cordenadas cilindricas\n");
+		        printf("porfavor introduce cordenadas rectangulares validas para converir:\n");
+		        scanf("%f",&x);
+                scanf("%f",&y);
+                scanf("%f",&z);
+                rc=sqrt(pow(x,2)+pow(y,2));
+                o=atan(y/x);
+                o=o*(180.0/M_PI);
+		        printf("las cordenadas rectangulares introducidas (x,y,z)y convertidas en cilindricas (rc,o,z)son: (%f,%f,%f)\n",rc,o,z);
+		    }
+//temperaturas
+		}else{
+		    printf("entonces transformemos temperatura\n");
+		    printf("introduce el valor de la temperatura en grados celius a convertir a  grados kelvin\n");
+            scanf("%d",&TC);
+            TK=TC+273.15;
+            printf("la temperatura (%d) en grados celcius es equivalente a (%d) grados kelvin\n",TC,TK);
+		}
+//ninguna de las 2 opciones
+	}else{
+	    printf("OK ,entonces no puedo ayudar con algo mas , una disculpa\n");
+	}
+//repetir el proceso,si se quisiera hacerlo
+	printf("quieres realizar alguno de mis procesos de nuevo?\n");
+	scanf("%d",&seguir);
+	if (seguir==1){
+	    goto inicio;
+	}
+//despide
+	printf("ok,hasta la proxima\n");
 exit (0);
 }
